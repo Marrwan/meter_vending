@@ -15,9 +15,9 @@ app.use(cors({
 app.use(bodyParser.json());
 
 // Sync Database
-// db.sequelize.sync({ force: false }).then(() => {
-//     console.log('Database synced');
-// });
+db.sequelize.sync({ force: false }).then(() => {
+    console.log('Database synced');
+});
 
 
 const meterRoute = require('./routes/meter');
